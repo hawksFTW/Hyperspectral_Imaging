@@ -46,6 +46,11 @@ test_y[:5]
 
 rmse = np.sqrt(metrics.mean_squared_error(test_y, pred_y))
 
+pred_x = lr.predict(train_x)
+
+rmsetrain = np.sqrt(metrics.mean_squared_error(train_y, pred_x))
+print(rmsetrain)
+
 test_y['pred_y'] = pred_y
 
 
